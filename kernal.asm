@@ -125,3 +125,44 @@ REPEAT1_SELSORT:
         RET                             ;RETURN SUBROUTINE 
     SKIP_SELSORT:   
     JMP REPEAT2_SELSORT         
+
+
+;---------------------------------------------------------;
+;                       COMMANDS                          ;
+;---------------------------------------------------------;
+COMMANDS:
+    DW DIR         ;0    ;DIRECTORY SHOW        
+    DW OPEN        ;1    ;OPEN FILE
+    DW CLOSE       ;2    ;CLOSE FILE 
+    DW MKDIR       ;3    ;CREATE DIRECTORY 
+    DW RMDIR       ;4    ;REMOVE DIRECTORY 
+    DW GETDATE     ;5    ;GET DATE 
+    DW GETTIME     ;6    ;GET TIME 
+    DW SETDATE     ;7    ;SET DATE 
+    DW SETTIME     ;8    ;SET TIME 
+    DW DELETE      ;9    ;DELETE FILE 
+    DW RENAME      ;10   ;RENAME FILE 
+    DW GETHEX      ;11   ;GET HEX DUMP 
+;----------------------------------------------------------;
+
+; ;-----------------------------------------------------------------------------------;
+; ;                              COMMAND HEX DUMP FILE                                ;
+; ;-----------------------------------------------------------------------------------;
+; ;   FORMAT:                                                                         ;
+; ;    ADDRESS:   HEX BYTES                                            ANSI ENCODING  ;
+; ;    0X0000      BC CA 10 23 45 24 12 12 04 45 50 30 23 04 32 34      $3!fd& 4#?}[  ;
+; ;-----------------------------------------------------------------------------------;
+; GETHEX:
+;     T_HEX_COUNTER   EQU 100
+;     T_DATAPOINTER   EQU 200 
+
+
+
+
+;     PUSH DX             ;SAVE REGISTERS 
+;     PUSH CX 
+;     PUSH BX 
+;     PUSH AX 
+
+    
+
