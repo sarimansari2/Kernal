@@ -163,3 +163,16 @@ COMMANDS:
 ;     PUSH CX 
 ;     PUSH BX 
 ;     PUSH AX
+
+copy_data:
+    pop ax 
+    pop cx 
+    pop si 
+    pop di 
+    push ax
+    
+ repeat_copy_data:
+    mov [di],[si]
+    inc di 
+    inc si 
+    loop repeat_copy_data
